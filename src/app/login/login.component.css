@@ -1,0 +1,12 @@
+.ng-invalid:not(form).ng-touched {
+    border: 1px solid red
+    }
+    
+    h1,h2,h3,h4 {
+        font-weight: normal;
+        width: 40%;
+    }
+    
+    .form-group {
+        width: 40%;
+      }

@@ -1,0 +1,144 @@
+<div class="container" > 
+  <div class='card'>
+    <div class='card-header' layout="row"  flex>
+      {{pageTitle }}
+    </div>
+    <div class="row">
+     <div class="col-lg-12">
+      <form #form="ngForm"    (ngSubmit)="onSubmit(form)" >  
+      <div class="form-group">
+       <label for="name">Name</label>  
+       <input id="name" name="name" class="form-control"  [(ngModel)] = "irequestrSetting.name"
+                   required #namefield="ngModel"  >
+      </div> 
+      <div [hidden]="namefield.valid || namefield.untouched"
+         class="alert alert-danger">
+          Enter a Name
+      </div>
+        <!--
+<h3>[(classTest.Name)]</h3>
+
+        <h3>dirty : {{propertyTest.dirty}}</h3>
+<h3>pristine:{{propertyTest.pristine}}</h3>
+<h3>touched:{{propertyTest.touched}}</h3>
+<h3>untouched:{{propertyTest.untouched}}</h3>
+<h3>valid:{{propertyTest.valid}}</h3>
+<h3>invalid:{{propertyTest.invalid}}</h3>
+-->
+     <div class="form-check" >
+       <div class="form-group">
+         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" >
+         <label class="form-check-label" for="defaultCheck1">
+            Default checkbox
+         </label>
+      </div>
+      <div class="form-check" class="form-group">        
+        <input class="form-check-input" type="checkbox" value="" id="emailOffers" name="emailOffers"  [(ngModel)]="irequestrSetting.emailOffers" >
+        <label class="form-check-label" for="emailOffers">
+           Email Special Offers
+        </label>
+      </div>
+     </div>
+<hr>
+    <div class="form-group">
+      <div class="form-check" >
+        <input class="form-check-input" type="radio" name="interfaceStyle"  [(ngModel)]="irequestrSetting.interfaceStyle"
+         id="lightInterface" value="light" checked  >
+        <label class="form-check-label" for="lightInterface">
+          Light
+        </label>
+      </div>      
+      <div class="form-check" >
+        <input class="form-check-input" type="radio" name="interfaceStyle" 
+        id="MediumInterface" value="Medium"   [(ngModel)]="irequestrSetting.interfaceStyle" >
+        <label class="form-check-label" for="MediumInterface">
+           Medium
+       </label>
+  </div>
+     
+  <div class="form-check" >
+    <input class="form-check-input" type="radio" name="interfaceStyle" 
+    id="DarkInterface" value="Dark"   [(ngModel)]="irequestrSetting.interfaceStyle">
+    <label class="form-check-label" for="DarkInterface">
+        Dark
+    </label>
+  </div>
+</div>
+<hr>
+<div class="form-group">
+    <label for="color"> Color</label>
+    <input type="color" id="color" name="color"
+     class="form-control" ngModel
+    />  
+</div> 
+<hr>
+    
+<div class="form-group">
+    <label for="subscriptionType"> Subscription Type</label>
+    <select class="form-control"  id="subscriptionType" name="subscriptionType"      [(ngModel)]="irequestrSetting.subscriptionType">       
+        <option>Weekly</option>
+        <option>Monthly</option>
+        <option>Annual</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="notes"> Notes</label>
+    <textarea id="notes" name="notes" class="form-control" 
+              rows=3 ngModel >
+    </textarea>   
+</div>
+
+<div class="form-group">
+    <label for="password"> Password</label>
+    <input type="password" id="password" name="password" 
+    class="form-control" />   
+</div>
+
+<div class="form-group">
+    <label for="image"> Image</label>
+    <input type="image" id="image" name="image"
+     class="form-control" />  
+</div>
+
+<div  class="form-group">
+    <!-- Select File 
+    <input type="file" accept="image/*" (change)="showPreview($event)" />
+    -->
+    <!-- Image Preview 
+    <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+      <img [src]="imageURL" [alt]="uploadForm.value.name">
+    </div>
+    -->
+    <!-- Assign Image Alt 
+    <button type="submit">Submit</button>
+    -->
+    <input formControlName="name" placeholder="Enter name">   
+</div>
+
+  <div class="form-group">
+    <label for="testing"> Testing Date</label>
+    <input type="date" id="testing" name="testing"
+     class="form-control"  ngModel
+    />  
+  </div>
+
+  <div class="form-group">
+      <label for="color"> Color</label>
+      <input type="color" id="color" name="color"
+        class="form-control" ngModel
+      />  
+  </div>
+
+  <div class="form-group">
+      <label for="email"> email</label>
+      <input type="email" id="email" name="email"
+        class="form-control" ngModel />  
+  </div>
+
+       <button class="btn btn-primary">Send</button>
+</form>
+
+</div>
+    <h3>{{ irequestrSetting | json }}</h3> 
+</div>

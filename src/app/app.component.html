@@ -1,0 +1,19 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{pageTitle}}
+  </h1>
+  <nav class='navbar navbar-expand navbar-light bg-light'>
+    <a class='navbar-brand'></a>
+        <ul class='nav nav-pills'>
+          <li><a class='nav-link' routerLinkActive='active' routerLink='/welcome'>Home</a></li>
+          <li><a class='nav-link' routerLinkActive='active' routerLink='/forms'>Forms</a></li>
+          <li><a class='nav-link' routerLinkActive='active' routerLink='/products'>Product List</a></li>
+          <li><a class='nav-link' routerLinkActive='active' routerLink='/reports'>Report List</a></li>
+          <li><a class='nav-link' routerLinkActive='active' routerLink='/login'>Login/Register</a></li>
+        </ul>   
+    </nav>
+
+    <div class='container'>
+        <router-outlet ></router-outlet> 
+    </div>
+</div>

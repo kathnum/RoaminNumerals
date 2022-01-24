@@ -1,0 +1,9 @@
+.nav-link {
+  font-size: large;
+}
+
+.ng-sidebar--right {
+  color: red;
+  background: antiquewhite;
+  width: 12rem;
+}
